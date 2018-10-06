@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Jumbotron from '../components/Jumbotron';
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer';
+import Jumbotron from '../components/Jumbotron/Jumbotron';
 
 class Contact extends Component {
     render() {

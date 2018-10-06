@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Jumbotron from '../components/Jumbotron';
-import Tracks from '../components/Tracks';
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer';
+import Jumbotron from '../components/Jumbotron/Jumbotron';
+import Tracks from '../components/Tracklist/Tracks';
 
 class Demos extends Component {
     render() {

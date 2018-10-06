@@ -2,7 +2,7 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 
-import Track from './Track';
+import Track from '../Track/Track';
 
 const Tracks = () => (
     <Query query={gql`
