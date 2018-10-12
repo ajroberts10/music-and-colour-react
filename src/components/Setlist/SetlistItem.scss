@@ -1,0 +1,10 @@
+.setlistItem {
+    &__title {
+        font-weight: bolder;
+    }
+    &__artist {
+      font-weight: normal;
+      font-style: italic;
+      color: #999;
+    }
+  }

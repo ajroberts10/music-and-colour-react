@@ -1,0 +1,12 @@
+.setlist {
+    margin-top: 24px;
+
+    &__search {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        list-style-type: none;
+        width: 100%;
+    }
+}
