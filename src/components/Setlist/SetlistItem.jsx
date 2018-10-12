@@ -7,7 +7,7 @@ const SetlistItem = ({itemData : { title, artist }}) => (
         <div className="container">
             <div className="row">
                 <div className="col">
-                    <span className=" setlistItem__title">{title}</span>
+                    <span className="setlistItem__title">{title}</span>
                 </div>
                 <div className="col">
                     <span className="setlistItem__artist">{artist}</span>

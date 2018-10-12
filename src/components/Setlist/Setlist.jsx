@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Query } from 'react-apollo';
-import gql from 'graphql-tag';
 
+import { GET_SETLIST_QUERY } from '../../queries/get_setlist.jsx';
 import SetlistItem from './SetlistItem';
 import './Setlist.scss';
+
 
 class Setlist extends Component {
     constructor() {
@@ -26,14 +27,7 @@ class Setlist extends Component {
 
     render() {
         return (
-        <Query query={gql`
-            {
-                setlist {
-                    title,
-                    artist
-                }
-            }
-        `}>
+        <Query query={GET_SETLIST_QUERY}>
             {({loading, error, data: { setlist }}) => {
                 const setlistItems = this.state.setlistItems || setlist;
                 if (loading) return <p>Loading ...</p>;
