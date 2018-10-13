@@ -6,7 +6,8 @@ import { MockedProvider } from 'react-apollo/test-utils';
 
 import { GET_SETLIST_QUERY } from '../../queries/get_setlist.jsx';
 import Setlist from './Setlist';
-import SetlistItem from './SetlistItem';
+
+let wrapper;
 
 const mocks = [
     {
@@ -23,6 +24,10 @@ const mocks = [
                     {
                         "title": "Babylon",
                         "artist": "David Grey"
+                    },
+                    {
+                        "title": "Sail Away",
+                        "artist": "David Grey"
                     }
                 ]
             }
@@ -31,23 +36,22 @@ const mocks = [
 ];
 
 describe('the setlist', () => {
-    it('renders without error', () => {
-        renderer.create(
-            <MockedProvider mocks={mocks} addTypename={false}>
-              <Setlist />
-            </MockedProvider>,
-          );
-    });
-
-    it('displays the provided data in a list', async () => {
-        const wrapper = mount((
+    beforeEach(() => {
+        wrapper = mount((
             <MockedProvider mocks={mocks} addTypename={false}>
                 <Setlist />
             </MockedProvider>
         ));
+    })
+
+    it('renders without error', async () => {
+        await wait(0);
+        expect(wrapper.find('Setlist')).toHaveLength(1);
+    });
+
+    it('displays the provided data in a list', async () => {
 
         await wait(0);
-
         const setListItem = wrapper
             .update()
             .find('SetlistItem')
@@ -55,7 +59,15 @@ describe('the setlist', () => {
 
         expect(setListItem.find('.setlistItem__title').text()).toContain('Black Magic Woman');
         expect(setListItem.find('.setlistItem__artist').text()).toContain('Santana');
-
-
     });
+
+    it('displays the correct results based on a search term', async () => {
+
+        await wait(0);
+        wrapper.update().find('input').simulate('change', {
+            target: { value: 'David' }
+        });
+
+        expect(wrapper.update().find('SetlistItem')).toHaveLength(2);
+    })
 });
