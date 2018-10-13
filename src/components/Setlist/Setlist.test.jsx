@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import wait from 'waait';
 import { mount } from 'enzyme';
 import { MockedProvider } from 'react-apollo/test-utils';
