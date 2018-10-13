@@ -9,9 +9,9 @@ class Live extends Component {
         return (
             <div>
                 <Navbar />
-                <Jumbotron title="Live" subtitle="Something cool" />
+                <Jumbotron title="Live" subtitle="A few of the songs we can play..." />
                 <div className="container">
-                    <h2>Live</h2>
+                    <h2>Browse Our Setlist:</h2>
                     <Setlist />
                 </div>
                 <Footer />
