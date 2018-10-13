@@ -50,12 +50,8 @@ class Setlist extends Component {
                                     }
                                 </ul>
                             </div>
-
-
                         </div>
-
-
-                </div>
+                    </div>
                 )}}
         </Query>
     )}

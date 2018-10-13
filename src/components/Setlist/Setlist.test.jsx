@@ -49,7 +49,7 @@ describe('the setlist', () => {
         expect(wrapper.find('Setlist')).toHaveLength(1);
     });
 
-    it('displays the provided data in a list', async () => {
+    it('displays the provided setlist in a list', async () => {
 
         await wait(0);
         const setListItem = wrapper
@@ -61,7 +61,7 @@ describe('the setlist', () => {
         expect(setListItem.find('.setlistItem__artist').text()).toContain('Santana');
     });
 
-    it('displays the correct results based on a search term', async () => {
+    it('displays the correct setlist items based on a search term', async () => {
 
         await wait(0);
         wrapper.update().find('input').simulate('change', {
