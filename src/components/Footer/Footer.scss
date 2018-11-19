@@ -4,6 +4,30 @@
     height: 100px;
     left: 0;
     line-height: 60px;
-    overflow: hidden;
-    width: 100%;
+    text-align: center;
+
+
+    &__icon-set {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__link {
+        &-icon {
+            margin: 8px;
+
+            &:hover {
+                color: #ef277c;
+            }
+        }
+    }
+
+
+
+    &__subtitle {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
